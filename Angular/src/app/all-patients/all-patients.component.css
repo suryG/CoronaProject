@@ -1,0 +1,10 @@
+#border{
+    border: 3px ;
+    border-color: brown;
+    border-style: double;
+    width: 50%;
+
+}
+#name{
+    font-size: 20pt;;
+}

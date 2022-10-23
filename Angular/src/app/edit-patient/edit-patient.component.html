@@ -1,0 +1,31 @@
+
+<div id="border" style="background-color: rgba(100, 246, 244, 0.746);">
+    <h2>עריכת לקוח{{myPatient.Name}}</h2>
+    <h2>פרטים</h2>
+  <div><span>שם פרטי </span><input type="text"  name="Name" [(ngModel)]="myPatient.Name"></div>
+  <div><span>שם משפחה </span><input type="text"  name="LastName" [(ngModel)]="myPatient.LastName"></div>
+  <div><span>תאריך לידה </span><input type="date"  name="dateOfBirth" [(ngModel)]="myPatient.DateOfBirth"></div>
+  <div><span>טלפון </span><input type="text"  name="phone" [(ngModel)]="myPatient.Phone"></div>
+  <div><span>פלאפון </span><input type="text"  name="cellPhone" [(ngModel)]="myPatient.CellPhone"></div>
+
+
+  <div><span>רחוב </span><input type="text"  name="Street" [(ngModel)]="myPatient.Street"></div>
+  <div><span>מספר </span><input type="number"  name="number" [(ngModel)]="myPatient.Number"></div>
+  <div><span>עיר </span><input type="text"  name="city" [(ngModel)]="myPatient.City"></div>
+  <h3>נתוני קורונה</h3>
+  <div><span>מועד קבלת תוצאה חיובית  </span>
+    <input type="date"  name="BecameIll" [(ngModel)]="newCorona.BecameIll"></div>
+  <div><span>תאריך החלמה </span><input type="date"  name="Recovery" [(ngModel)]="newCorona.Recovery"></div>
+  <h4> חיסונים</h4>
+  
+  <div *ngFor="let c of n,let i=index; trackBy:funcindex" >
+    <p>{{i}}</p>
+    <input type="date" [(ngModel)]="newVaccition[i].GetVaccinated" name="{{newVaccition[i].GetVaccinated}}"  >
+    <input type="text" [(ngModel)]="newVaccition[i].manufacturer" name="{{newVaccition[i].manufacturer}}"  >
+ 
+</div>
+<input type="button" value=" הוסף חיסון"  (click)="addVaccition()">  <div><input type="button" value="שמור שינויים" (click)="saveChanges()">
+    <input type="button" value="בטל" (click)="cancel()">
+ </div>
+ 
+    </div>

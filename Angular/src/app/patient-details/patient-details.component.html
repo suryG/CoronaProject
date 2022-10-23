@@ -1,0 +1,35 @@
+
+
+
+     
+
+
+
+     
+          <h1>{{patientDetail1.Name}} {{patientDetail1.LastName}}</h1>
+      
+          <p> כתובת:{{patientDetail1.Street}} {{patientDetail1.Number}} {{patientDetail1.City}}</p>
+          <p>טלפון: {{patientDetail1.Phone}}</p>
+          <p>פלאפון: {{patientDetail1. CellPhone}}</p>
+         
+          <p>תאריך קבלת תוצאה חיובית{{coronaDetail1.BecameIll|date}}</p>
+          <p>תאריך החלמה:{{coronaDetail1.Recovery|date}}</p>
+                  
+        
+<div *ngFor="let r of vaccitionDetail;let i=index">
+    <h4>{{i+1}}חיסון מספר</h4>
+          <p>תאריך קבלת החיסון{{r.GetVaccinated|date}}</p>
+          <p>סוג החיסון{{r.manufacturer}}</p>
+          
+</div>
+<input type="button" value="חזרה" (click)="back()"/>
+
+
+                    
+                 
+                 
+                  
+                
+          
+            
+       

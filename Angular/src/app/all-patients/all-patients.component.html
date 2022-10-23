@@ -1,0 +1,11 @@
+
+   
+    <div *ngFor="let x of patientList"  id="border" >
+      <div (click)="details(x)" >
+        <p id="name">{{x.Name}} {{x.LastName}}</p>
+    
+      </div>
+        
+        <input type="button"  (click)="edit(x)" value="edit">
+        <input type="button"  (click)="delete(x)" value="delete"></div>
+    <div> <input type="button" (click)="add()" value="addPatient"></div>
